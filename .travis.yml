@@ -18,8 +18,3 @@ jobs:
   - stage: test
     name: "Test"
     script: yarn test
-  - stage: docs
-    name: "Coverage"
-    script: yarn coverage:publish
-  - script: yarn docs
-    name: "API Docs"
