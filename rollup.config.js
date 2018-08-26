@@ -1,4 +1,5 @@
 import packageJson from './package.json'
+import json from 'rollup-plugin-json'
 import babel from 'rollup-plugin-babel'
 import { uglify } from 'rollup-plugin-uglify'
 
@@ -13,6 +14,7 @@ export default {
   },
   external: [ '@chakrajs/plugin-interface' ],
   plugins: [
+    json(),
     babel({
       babelrc: false,
       exclude: 'node_modules/**',
